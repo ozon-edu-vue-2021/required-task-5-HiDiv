@@ -1,14 +1,19 @@
 <template>
-  <div id="app">
-  </div>
+  <b-container id="app">
+    <nav-bar></nav-bar>
+
+    <div class="mt-3">
+      <router-view />
+    </div>
+  </b-container>
 </template>
 
 <script>
+import NavBar from "@/components/NavBar/NavBar.vue";
 
 export default {
-  name: "App",
   components: {
-    Form,
+    NavBar,
   },
 };
 </script>
@@ -16,19 +21,9 @@ export default {
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
   color: #2c3e50;
-  background-color: #fafafa;
-  padding: 24px;
-  box-sizing: border-box;
-}
-
-html,
-body,
-#app {
-  height: 100%;
-}
-
-* {
-  box-sizing: border-box;
 }
 </style>
